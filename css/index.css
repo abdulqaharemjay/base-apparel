@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.center-container {
+  margin-left: 50px;
+}
+
+.left-section {
+  display: flex;
+  background: url('../images/bg-pattern-desktop.svg') no-repeat;
+  background-size: cover;
+}
+
+.app {
+  display: flex;
+}
+
+.logo {
+  padding: 40px 0px 80px 0
+}
+
+.value-prop {
+  line-height: 50px;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+
+.value-prop span {
+  display: block;
+  text-transform: uppercase;
+}
+
+.value-prop span:first-child {
+  font-size: 48px;
+  font-weight: 300;
+  color:hsl(0, 36%, 70%)
+}
+
+.value-prop span:nth-child(2), .value-prop span:last-child {
+  font-size: 48px;
+  color: hsl(0, 6%, 24%);
+}
+
+p {
+  width: 70%;
+  font-size: 16px;
+  color:hsl(0, 36%, 70%);
+  line-height: 2rem;
+  margin-bottom: 30px;;
+}
+
+.left-section, .right-section {
+  width: 50vw;
+}
+
+form {
+  position: relative;
+  display: inline;
+}
+
+form input, form button {
+  height: 48px;
+}
+
+
+#email {
+  width: 75%;
+  padding-left: 20px;
+  border: 1px solid hsl(0, 80%, 86%) ;
+  border-radius: 40px;
+  color: rgb(247, 190, 190);
+}
+#email::placeholder {
+  color: hsl(0, 80%, 86%);
+}
+
+#email:focus {
+  outline: none;
+  border: 2px solid hsl(0, 93%, 68%);
+}
+
+#submit {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  z-index: 9;
+  border: 0;
+  border-radius: 40px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%,  hsl(0, 74%, 74%) 100%);
+  color: white;
+  box-shadow: 0 5px 10px rgba(206, 150, 150, .4);
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+}
+
+.icon{
+  position: absolute;
+  left: -20px;
+  display: block;
+  width: 13%;
+  height: auto;
+  transition: all .3s ease-in-out
+}
+
+.text {
+  position: absolute;
+  left: 20px;
+  transition: all .3s ease-in-out;
+}
+
+
+#submit:hover {
+  background: linear-gradient(0deg, hsl(0, 80%, 86%) 0%,  hsl(0, 80%, 86%) 100%);
+  box-shadow: 0 7px 15px rgba(206, 150, 150, 1);
+  cursor: pointer;
+}
+
+#submit:hover .text {
+  left: 100px;
+}
+
+#submit:hover .icon {
+  left: 39px;
+}
+
+
+.right-section {
+  height: 100vh;
+  background: url(../images/hero-desktop.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+footer {
+  width: 50vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px 10px;
+}
+
+.attribution { font-size: 11px; }
+.attribution a { color: hsl(228, 45%, 44%); }
