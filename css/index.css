@@ -11,10 +11,13 @@ body {
   height: 100vh;
 }
 
+.border {
+  border: 1px solid;
+}
+
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
 }
 
@@ -22,71 +25,90 @@ body {
   margin-left: 50px;
 }
 
-.left-section {
-  display: flex;
-  background: url('../images/bg-pattern-desktop.svg') no-repeat;
-  background-size: cover;
+.flex {
+  display: flex
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .app {
-  display: flex;
+  height: 100vh;
+  width: 50vw;
+  background: url(../images/bg-pattern-desktop.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.left-content {
+ width: 80%;
 }
 
 .logo {
-  padding: 40px 0px 80px 0
+  padding: 40px 0px 40px 0
+}
+
+.hero-img {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../images/hero-desktop.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 .value-prop {
   line-height: 50px;
   margin-bottom: 20px;
+  margin-top: 0px;
   letter-spacing: 10px;
 }
 
 .value-prop span {
   display: block;
+  font-size: 48px;
   text-transform: uppercase;
 }
 
 .value-prop span:first-child {
-  font-size: 48px;
   font-weight: 300;
   color:hsl(0, 36%, 70%)
 }
 
 .value-prop span:nth-child(2), .value-prop span:last-child {
-  font-size: 48px;
   color: hsl(0, 6%, 24%);
 }
 
 p {
-  width: 70%;
+  width: 80%;
   font-size: 16px;
   color:hsl(0, 36%, 70%);
   line-height: 2rem;
   margin-bottom: 30px;;
 }
 
-.left-section, .right-section {
-  width: 50vw;
-}
-
 form {
   position: relative;
-  display: inline;
+  width: 80%;
 }
 
 form input, form button {
   height: 48px;
 }
 
-
 #email {
-  width: 75%;
+  width: 100%;
   padding-left: 20px;
   border: 1px solid hsl(0, 80%, 86%) ;
   border-radius: 40px;
   color: rgb(247, 190, 190);
 }
+
 #email::placeholder {
   color: hsl(0, 80%, 86%);
 }
@@ -99,10 +121,11 @@ form input, form button {
 #submit {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 20%;
   position: absolute;
-  right: 0;
-  top: -15px;
+  right: 0px;
+  top: 0px;
   z-index: 9;
   border: 0;
   border-radius: 40px;
@@ -114,20 +137,23 @@ form input, form button {
 }
 
 .icon{
+  margin: 0;
   position: absolute;
-  left: -20px;
-  display: block;
-  width: 13%;
+  top: 50%;
+  left: -60px;
+  transform: translate(-50%, -50%);
+  width: 10px;
   height: auto;
   transition: all .3s ease-in-out
 }
 
 .text {
-  position: absolute;
-  left: 20px;
   transition: all .3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 #submit:hover {
   background: linear-gradient(0deg, hsl(0, 80%, 86%) 0%,  hsl(0, 80%, 86%) 100%);
@@ -136,13 +162,15 @@ form input, form button {
 }
 
 #submit:hover .text {
-  left: 100px;
+  left: 130px;
 }
 
 #submit:hover .icon {
-  left: 39px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .right-section {
   height: 100vh;
@@ -150,14 +178,135 @@ form input, form button {
   background-size: cover;
 }
 
-
 footer {
   width: 50vw;
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 50px 10px;
+  padding: 0px 30px;
 }
 
 .attribution { font-size: 11px; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 1298px) and (min-width: 767px) {
+  .logo {
+    padding: 40px 0px 150px 0
+  }
+
+  .value-prop-body {
+    width: 95%;
+    margin-bottom: 30px;
+    line-height: 35px;
+  }
+
+  form {
+    width: 95%;
+  }
+
+  .text {
+    left: 50%;
+  }
+
+
+  .left-content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 571px) {
+  
+  .text{
+    display: none;
+  }
+  
+  .icon {
+    left: 50%;
+  }
+    
+}
+@media screen and (max-width: 570px) and (min-width: 375px) {
+  .left-section {
+    width: 100vw
+  }
+  .container {
+    width: 100%;
+    display: block;
+  }
+  .center-container {
+    margin-left: 20px;
+    border: 1px solid;
+  }
+
+  .sm-center {
+    width: 100vw;
+    padding: 0
+  }
+
+  .right-section {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 30px;
+    padding-bottom: 40px;
+    width: 60px;
+    height: auto;
+  }
+
+  .hero-img {
+    width: 100vw;
+    height: 320px;
+    position: relative;
+    background: url(../images/hero-desktop.jpg) no-repeat top center;
+    background-position-y: -40px;
+    background-size: cover;
+  }
+
+  .vp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .value-prop span {
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+  }
+  .value-prop-body {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 25px;
+  }
+  form {
+    width: 90%;
+    text-align: center;
+  }
+  #email {
+    width: 90%;
+  }
+ 
+  #submit .text {
+    display: none;
+  }
+  
+  .icon {
+    left: 50%;
+  }
+
+  footer {
+    width: 100vw;
+    padding: 0px;
+  }
+  footer p {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+ 
+}
