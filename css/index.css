@@ -137,10 +137,6 @@ form button {
   display: block;
 }
 
-#email:invalid .errmsg {
-  display: block;
-}
-
 #submit {
   display: flex;
   align-items: center;
@@ -255,7 +251,7 @@ footer {
 }
 @media screen and (max-width: 768px) and (min-width: 360px) {
   body {
-    overflow: hidden;
+    overflow: auto;
   }
   .left-section {
     width: 100vw;
@@ -316,7 +312,9 @@ footer {
   form {
     width: 90%;
     text-align: center;
+    margin-bottom: 100px;
   }
+
   #email {
     width: 90%;
   }
@@ -329,9 +327,15 @@ footer {
     left: 50%;
   }
 
+
+
   footer {
     width: 100vw;
     padding: 0px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background: white;
   }
   footer p {
     margin: 0;
