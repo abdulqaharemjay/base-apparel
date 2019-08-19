@@ -41,7 +41,7 @@ body {
 .app {
   height: 100vh;
   width: 50vw;
-  background: url(../images/bg-pattern-desktop.svg) no-repeat center center;
+  background: url(/images/bg-pattern-desktop.svg) no-repeat center center;
   background-size: cover;
 }
 
@@ -59,7 +59,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background: url(../images/hero-desktop.jpg) no-repeat center center;
+  background: url(/images/hero-desktop.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -253,7 +253,7 @@ footer {
     left: 50%;
   }
 }
-@media screen and (max-width: 768px) and (min-width: 375px) {
+@media screen and (max-width: 768px) and (min-width: 360px) {
   body {
     overflow: hidden;
   }
