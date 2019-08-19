@@ -1,8 +1,9 @@
 * {
   padding: 0;
   margin: 0;
+  outline: none;
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 }
 
 .flex {
-  display: flex
+  display: flex;
 }
 
 .flex-column {
@@ -45,11 +46,11 @@ body {
 }
 
 .left-content {
- width: 80%;
+  width: 80%;
 }
 
 .logo {
-  padding: 40px 0px 40px 0
+  padding: 40px 0px 120px 0;
 }
 
 .hero-img {
@@ -64,8 +65,7 @@ body {
 
 .value-prop {
   line-height: 50px;
-  margin-bottom: 20px;
-  margin-top: 0px;
+  margin-bottom: 30px;
   letter-spacing: 10px;
 }
 
@@ -77,19 +77,20 @@ body {
 
 .value-prop span:first-child {
   font-weight: 300;
-  color:hsl(0, 36%, 70%)
+  color: hsl(0, 36%, 70%);
 }
 
-.value-prop span:nth-child(2), .value-prop span:last-child {
+.value-prop span:nth-child(2),
+.value-prop span:last-child {
   color: hsl(0, 6%, 24%);
 }
 
 p {
   width: 80%;
   font-size: 16px;
-  color:hsl(0, 36%, 70%);
+  color: hsl(0, 36%, 70%);
   line-height: 2rem;
-  margin-bottom: 30px;;
+  margin-bottom: 40px;
 }
 
 form {
@@ -97,14 +98,15 @@ form {
   width: 80%;
 }
 
-form input, form button {
+form input,
+form button {
   height: 48px;
 }
 
 #email {
   width: 100%;
   padding-left: 20px;
-  border: 1px solid hsl(0, 80%, 86%) ;
+  border: 1px solid hsl(0, 80%, 86%);
   border-radius: 40px;
   color: rgb(247, 190, 190);
 }
@@ -118,6 +120,27 @@ form input, form button {
   border: 2px solid hsl(0, 93%, 68%);
 }
 
+.err-icon {
+  background: url(../images/icon-error.svg) no-repeat center;
+  background-position-x: 75%
+}
+
+.err-msg {
+  display: none;
+  color: hsl(0, 93%, 68%);
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.show-err {
+  display: block;
+}
+
+#email:invalid .errmsg {
+  display: block;
+}
+
 #submit {
   display: flex;
   align-items: center;
@@ -129,14 +152,18 @@ form input, form button {
   z-index: 9;
   border: 0;
   border-radius: 40px;
-  background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%,  hsl(0, 74%, 74%) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%) 0%,
+    hsl(0, 74%, 74%) 100%
+  );
   color: white;
-  box-shadow: 0 5px 10px rgba(206, 150, 150, .4);
-  transition: all .2s ease-in-out;
+  box-shadow: 0 5px 10px rgba(206, 150, 150, 0.4);
+  transition: all 0.2s ease-in-out;
   overflow: hidden;
 }
 
-.icon{
+.icon {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -144,11 +171,11 @@ form input, form button {
   transform: translate(-50%, -50%);
   width: 10px;
   height: auto;
-  transition: all .3s ease-in-out
+  transition: all 0.3s ease-in-out;
 }
 
 .text {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,7 +183,7 @@ form input, form button {
 }
 
 #submit:hover {
-  background: linear-gradient(0deg, hsl(0, 80%, 86%) 0%,  hsl(0, 80%, 86%) 100%);
+  background: linear-gradient(0deg, hsl(0, 80%, 86%) 0%, hsl(0, 80%, 86%) 100%);
   box-shadow: 0 7px 15px rgba(206, 150, 150, 1);
   cursor: pointer;
 }
@@ -183,15 +210,19 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 0px 30px;
+  padding-left: 70px;
 }
 
-.attribution { font-size: 11px; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 @media screen and (max-width: 1298px) and (min-width: 767px) {
   .logo {
-    padding: 40px 0px 150px 0
+    padding: 40px 0px 150px 0;
   }
 
   .value-prop-body {
@@ -208,26 +239,23 @@ footer {
     left: 50%;
   }
 
-
   .left-content {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 768px) and (min-width: 571px) {
-  
-  .text{
+  .text {
     display: none;
   }
-  
+
   .icon {
     left: 50%;
   }
-    
 }
-@media screen and (max-width: 570px) and (min-width: 375px) {
+@media screen and (max-width: 768px) and (min-width: 375px) {
   .left-section {
-    width: 100vw
+    width: 100vw;
   }
   .container {
     width: 100%;
@@ -240,7 +268,7 @@ footer {
 
   .sm-center {
     width: 100vw;
-    padding: 0
+    padding: 0;
   }
 
   .right-section {
@@ -258,8 +286,8 @@ footer {
     width: 100vw;
     height: 320px;
     position: relative;
-    background: url(../images/hero-desktop.jpg) no-repeat top center;
-    background-position-y: -40px;
+    background: url(../images/hero-mobile.jpg) no-repeat top center;
+    background-position-y: 0px;
     background-size: cover;
   }
 
@@ -269,7 +297,7 @@ footer {
     align-items: center;
     margin-top: 40px;
   }
-  
+
   .value-prop span {
     font-size: 40px;
     line-height: 46px;
@@ -289,11 +317,11 @@ footer {
   #email {
     width: 90%;
   }
- 
+
   #submit .text {
     display: none;
   }
-  
+
   .icon {
     left: 50%;
   }
@@ -308,5 +336,4 @@ footer {
     padding-bottom: 10px;
     width: 100%;
   }
- 
 }

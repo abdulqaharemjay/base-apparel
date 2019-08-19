@@ -46,13 +46,14 @@
               </p>
             </div>
 
-              <form class="form">
-                <input type="text" placeholder="Email Address" id="email" />
+              <form class="form" novalidate>
+                <input type="email" placeholder="Email Address" id="email" />
                 <button id="submit">
                   <img src="/images/icon-arrow.svg" alt="" class="icon" />
                   <span class="text">Submit</span>
                 </button>
               </form>
+              <span class="err-msg">Please provide a valid email</span>
             
           </div>
         </div>
@@ -69,8 +70,10 @@
             >. Coded by
             <a href="https://twitter.com/abdulqaharEmjay">Abdulqahar Emjay</a>.
           </p>
+          
         </div>
       </footer>
     </section>
+    <script src="/email-validation.js"></script>
   </body>
 </html>
